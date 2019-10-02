@@ -1,0 +1,13 @@
+\begin{lstlisting}[language=c,caption=\texttt{buffer-overflow.c}: C Programm Buffer Overflow, label=buffer-overflow.c]
+#include <stdio.h>
+
+int main(){
+    char buff[2];
+
+    for(int i = 0; i < 5; ++i)
+        buff[i] = 'a';
+
+    for(size_t i = 0; i < 1000000; ++i)
+        printf("%c\n", buff[i]);
+}
+\end{lstlisting}
