@@ -19,6 +19,7 @@ Next `intro.tex`, `content.tex` and `fin.tex` are included. `content.tex` is whe
 
 `appendix.tex` and `postmeta.tex` are included last. Contents of `appendix.tex` should be clear, `postmeta.tex` is used for content after the appendix, such as the bibliography list.
 
+The `src.bib` contains the definitions of your bibliographic references.
 
 ### Compilation
 
