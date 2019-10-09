@@ -29,3 +29,6 @@ If you don't have a local latex installation you may want to use `run.sh` which 
 
 The resulting PDF-Files can be found in the `pdf` directory.
 
+## Contribution
+
+Contributions of any kind are welcome.
