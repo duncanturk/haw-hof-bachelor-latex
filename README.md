@@ -4,9 +4,9 @@ This should help you to match the formal requirements for a Bachelor thesis at [
 
 ## How to use
 
-### Adjusments
+### Adjustments
 
-The `main.tex` is the root source file that will be compiled, it contains package includes, command definitions and global style settings. It's not necessary to change it.
+The `main.tex` is the root source file that will be compiled, it contains package includes, command definitions and global style settings. It contains PDF-meta information in a `\hypersetup` call that should be adjusted.
 It `\input`s all other files.
 
 The `titlepage.tex` file contains information about author, title and so on. These should be replaced.

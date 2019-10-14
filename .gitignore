@@ -8,6 +8,7 @@
 *.lof
 *.log
 *.lol
+*.out
 *.pdf
 *.run.xml
 *.swp
