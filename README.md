@@ -24,11 +24,13 @@ The `src.bib` contains the definitions of your bibliographic references.
 ### Compilation
 
 The `Makefile` uses your local `pdflatex` and `biber` installation.
-If these are installed just execute `make` in the directory should be sufficient.
+If these are installed running `make` in the directory should be sufficient.
 
 If you don't have a local latex installation you may want to use `run.sh` which requires docker and compiles your tex files in a docker container.
 
 The resulting PDF-Files can be found in the `pdf` directory.
+
+Just using `latexmk` on `main.tex` is also possible.
 
 ## Contribution
 
