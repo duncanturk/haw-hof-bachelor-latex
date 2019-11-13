@@ -34,4 +34,4 @@ Just using `latexmk` on `main.tex` is also possible.
 
 ## Contribution
 
-Contributions of any kind are welcome.
+Contributions and suggestions of any kind are welcome.
