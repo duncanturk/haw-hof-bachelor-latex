@@ -6,31 +6,23 @@ This should help you to match the formal requirements for a Bachelor thesis at [
 
 ### Adjustments
 
-The `main.tex` is the root source file that will be compiled, it contains package includes, command definitions and global style settings. It contains PDF-meta information in a `\hypersetup` call that should be adjusted.
-It `\input`s all other files.
+The `Bachelorarbeit.tex` and `Praxisarbeit.tex` are the root source files that will be compiled. It `\input`s all other files. The `ba` directory holds content specific to the `Bachelorarbeit.tex` file and the `pa` directory holds content exclusive to the `Praxisarbeit.tex`. shared content is found in the root direcory, `img` directory or the `listings` directory. Feel free to adjust this structure to your needs. 
 
-The `titlepage.tex` file contains information about author, title and so on. These should be replaced.
-It's the first file that is included.
+First the `header.tex` file is included (in both `Bachelorarbeit.tex` and `Praxisarbeit.tex`). It declares which packages to use. Then `Bachelorarbeit.tex` `\input`s `ba/vars.tex` and `Praxisarbeit.tex` `\input`s `pa/vars.tex`. The `vars.tex` files include Document specific variables like your name or type of document. These should be replaced.
 
-`meta.tex` sets variables like author and title, print's the table of contents, list of figures, list of used abbreviations (created and maintained by hand, contributions to improve this are welcome) and the list of listings.
-It's the second file that gets included.
+`meta.tex` sets variables like author and title (sourced from `vars.tex`), print's the table of contents, list of figures, list of used abbreviations, list of listings and list of tables.
 
-Next `intro.tex`, `content.tex` and `fin.tex` are included. `content.tex` is where the main content of the thesis goes.
+Next `ba/intro.tex`, `ba/content.tex` and `ba/fin.tex` are included in `Bachelorarbeit.tex`. `ba/content.tex` is where the main content of the thesis goes.
+The same is true for the `pa/*` files and `Praxisarbeit.tex`.
 
 `appendix.tex` and `postmeta.tex` are included last. Contents of `appendix.tex` should be clear, `postmeta.tex` is used for content after the appendix, such as the bibliography list.
 
 The `src.bib` contains the definitions of your bibliographic references.
+The `abbrev.tex` contains the abbriviations you want to use.
 
 ### Compilation
 
-The `Makefile` uses your local `pdflatex` and `biber` installation.
-If these are installed running `make` in the directory should be sufficient.
-
-If you don't have a local latex installation you may want to use `run.sh` which requires docker and compiles your tex files in a docker container.
-
-The resulting PDF-Files can be found in the `pdf` directory.
-
-Just using `latexmk` on `main.tex` is also possible.
+Run `latexmk -pdf Bachelorarbeit.tex` or `latexmk -pdf Praxisarbeit.tex` to compile your documents.
 
 ## Contribution
 
