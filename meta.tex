@@ -1,6 +1,6 @@
-\title{Buchstaben der Gesetze - Gesetze der Buchstaben}
+\title{\mytitle}
 \author{%
-  Christopher Ro\ss bach (0123456)%
+  \myname{} (\mymatrnr)%
 }
 \newpage
 {
@@ -9,14 +9,14 @@
 \clearpage
 % \addcontentsline{toc}{section}{\listfigurename}
 \listoffigures
-% \addcontentsline{toc}{section}{Abk"urzungsverzeichnis}
-\section*{Abk"urzungsverzeichnis} % Von Hand gepflegt
-\begin{tabularx}{\textwidth}{l X}
-  DBMS & Data Base Management System\\
-  IDE & Integrated Development Environment, Enwicklungsumgebung\\
-  TCP & Transmission Control Protocol, zuverlässiges und verbinungsorientiertes Netzwerkprotokoll\autocite{wiki.tcp}\\
-  VCS & Version Control System, Software zur versionsbasierten Dateiverwaltung
-\end{tabularx}
+\setstretch{0.7}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\glsenablehyper
+\printnoidxglossary[style=long3col,title=Abkürzungsverzeichnis]
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+\setstretch{1}
 % \addcontentsline{toc}{section}{\lstlistlistingname}
 \lstlistoflistings
+\listoftables
+\setcounter{table}{0}
 }

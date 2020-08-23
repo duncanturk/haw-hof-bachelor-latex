@@ -1,0 +1,21 @@
+\input{header}
+\input{pa/vars}
+\input{commands}
+
+\begin{document}
+\pagestyle{sta}
+\pagenumbering{Roman}
+\input{titlepage}
+\input{sperrvermerk} % optional
+\input{meta}
+\clearpage
+\pagenumbering{arabic}
+\let\Section\section
+\renewcommand\section{\clearpage\Section}
+\input{pa/intro}
+\input{pa/content}
+\input{pa/fin}
+\blankpage
+\input{pa/appendix}
+\input{postmeta}
+\end{document}

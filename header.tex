@@ -1,14 +1,13 @@
-\documentclass[numbers=noenddot, a4paper, oneside, fontsize=12pt]{scrartcl}
+\documentclass[headings=standardclasses, numbers=noenddot, a4paper, oneside, fontsize=12pt]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage{mathptmx}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage[all]{nowidow}
 \usepackage[final]{listings}
-\usepackage{tabularx}
+\usepackage{ltablex}
 \usepackage{caption}
 \usepackage[title]{appendix}
-\usepackage{mathptmx}
 \usepackage{setspace}
 \usepackage[backend=biber,style=numeric-comp,citestyle=verbose-note,autocite=footnote,labelnumber=true]{biblatex}
 \usepackage{graphicx}
@@ -19,6 +18,11 @@
 \usepackage[multiple]{footmisc}
 \usepackage[table]{xcolor}
 \usepackage{amssymb}
+\usepackage[letterspace=250]{microtype}
+\usepackage{hhline}
+\usepackage{wrapfig}
+\usepackage{xr-hyper}
+\usepackage{makecell}
 \usepackage[
   bookmarks=true,
   bookmarksopen=true,
@@ -32,15 +36,9 @@
   menucolor=black,
   urlcolor=black
 ]{hyperref}
+\usepackage{glossaries-extra} % load after hyperref
 
-
-\hypersetup{
-  pdfstartpage=1,
-  pdftitle={Bachelorarbeit - Buchstaben der Gesetze},
-  pdfauthor={Christopher Roßbach},
-  pdfsubject={Buchstaben der Gesetze - Gesetze der Buchstaben},
-  pdfkeywords={Bachelorarbeit,Gesetz,Recht,Literatur und Recht,Literatur},
-}
+\input{abbrev}
 
 \newcommand{\sectionbreak}{\clearpage}
 \geometry{top=30mm, bottom=30mm, left=30mm,right=25mm}
@@ -63,16 +61,4 @@
 
 \renewcommand{\baselinestretch}{1.3}
 
-\begin{document}
-\pagestyle{sta}
-\pagenumbering{Roman}
-\input{titlepage}
-\input{meta}
-\clearpage
-\pagenumbering{arabic}
-\input{intro}
-\input{content}
-\input{fin}
-\input{appendix}
-\input{postmeta}
-\end{document}
+\setabbreviationstyle{short-long}

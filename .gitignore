@@ -10,6 +10,7 @@
 *.lof
 *.log
 *.lol
+*.lot
 *.out
 *.pdf
 *.run.xml
